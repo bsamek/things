@@ -4,6 +4,10 @@
 today:
     uv run things-cli today
 
+# Show someday tasks
+someday:
+    uv run things-cli someday
+
 # List all available tags
 tags:
     uv run things-cli tags
