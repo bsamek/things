@@ -2,6 +2,15 @@
 
 This repository is for interacting with Things App.
 
+## Prerequisites
+
+This project uses `just` as a command runner. You need to install it first:
+
+**macOS:**
+```bash
+brew install just
+```
+
 ## Available Commands
 
 The justfile provides convenient shortcuts for common things-cli queries:
