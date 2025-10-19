@@ -4,11 +4,25 @@ This repository is for interacting with Things App.
 
 ## Prerequisites
 
-This project uses `just` as a command runner. You need to install it first:
+This project uses `just` as a command runner and `uv` for Python package management.
 
 **macOS:**
 ```bash
+# Install just
 brew install just
+
+# Install uv
+brew install uv
+```
+
+## Setup
+
+After installing the prerequisites, install the Python dependencies:
+
+```bash
+# Create virtual environment and install packages
+uv venv
+uv pip install things-cli
 ```
 
 ## Available Commands
