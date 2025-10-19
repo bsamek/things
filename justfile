@@ -10,4 +10,4 @@ tags:
 
 # List undone tasks with a specific tag
 tag TAG:
-    uv run things-cli -t {{ TAG }} todos
+    uv run things-cli -t {{ TAG }} anytime
