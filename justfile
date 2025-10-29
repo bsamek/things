@@ -2,7 +2,7 @@
 
 # Show tasks assigned to today
 today:
-    uv run things-cli today
+    uv run things-cli -j today | uv run python group_by_project.py
 
 # Show someday tasks
 someday:
