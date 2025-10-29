@@ -18,17 +18,24 @@ def main():
             continue
 
         title = item.get("title", "")
+        status = item.get("status", "")
 
         # Prefer project_title, fall back to area_title
         group_name = item.get("project_title") or item.get("area_title") or "No Project"
 
-        grouped[group_name].append(title)
+        grouped[group_name].append(
+            {
+                "title": title,
+                "status": status,
+            }
+        )
 
     # Sort groups alphabetically and output
     for group_name in sorted(grouped.keys()):
         print(f"# {group_name}")
         for task in grouped[group_name]:
-            print(f"- {task}")
+            checkbox = "x" if task["status"] == "completed" else " "
+            print(f"- [{checkbox}] {task['title']}")
         print()  # Blank line between sections
 
 if __name__ == "__main__":
