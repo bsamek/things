@@ -1,1 +1,2 @@
-CLAUDE.md
+- Commit frequently
+- The justfile is available as an interface for things-cli
