@@ -1,2 +1,2 @@
 - Commit frequently
-- The justfile is available as an interface for things-cli
+- The justfile is available as an interface for things-cli. See README.md for details.
