@@ -17,7 +17,7 @@ tag TAG:
     uv run things-cli -t {{ TAG }} -j anytime | uv run python group_by_project.py
 
 # Show all available recipes
-list:
+help:
     just --list
 
 # Write Office-tagged tasks directly to Obsidian note
