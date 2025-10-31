@@ -25,5 +25,5 @@ help:
     just --list
 
 # Write Office-tagged tasks directly to Obsidian note
-office:
+write:
     uv run things-cli -t Office -j anytime | uv run python group_by_project.py > '/Users/brian.samek/Google Drive/My Drive/Notes/To Do.md'
