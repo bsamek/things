@@ -56,7 +56,18 @@ def print_markdown(grouped: "OrderedDict[str, List[str]]") -> None:
 
 def main() -> None:
     """Format Things logbook JSON piped on stdin."""
-    tasks = json.load(sys.stdin)
+    raw = sys.stdin.read().strip()
+    if not raw:
+        raise SystemExit(
+            "No logbook data received. Check that the tag exists and things-cli succeeds."
+        )
+    try:
+        tasks = json.loads(raw)
+    except json.JSONDecodeError as exc:
+        raise SystemExit(
+            "Unexpected non-JSON output from things-cli; re-run with `uv run things-cli "
+            "-j logbook ...` to inspect the error."
+        ) from exc
     if not isinstance(tasks, list):
         raise SystemExit("Expected list of tasks from things-cli JSON output.")
 
