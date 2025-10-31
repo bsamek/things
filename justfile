@@ -16,6 +16,10 @@ tags:
 tag TAG:
     uv run things-cli -t {{ TAG }} -j anytime | uv run python group_by_project.py
 
+# Show completed tasks from the last 7 days with a specific tag
+done TAG:
+    uv run things-cli -t {{ TAG }} -j logbook | uv run python logbook_last_week.py
+
 # Show all available recipes
 help:
     just --list
